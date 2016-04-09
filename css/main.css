@@ -1,0 +1,13 @@
+.tile {
+
+}
+
+.grid {
+  text-align: center;
+}
+
+.row {
+  height: 100px;
+  width: 100px;
+  border: 5px black;
+}

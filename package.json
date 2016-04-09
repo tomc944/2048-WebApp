@@ -1,0 +1,16 @@
+{
+  "name": "2048",
+  "version": "1.0.0",
+  "description": "Clone of the classic game.",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
