@@ -42,11 +42,75 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
+
+	var Game = __webpack_require__(1);
+	var InputManager = __webpack_require__(2); 
 
 	window.addEventListener('DOMContentLoaded', function() {
-
+	  new Game(4, InputManager);
 	})
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	function Game(size, InputManager) {
+	  this.size = size; // Defaults to 4x4
+	  this.inputManager = new InputManager;
+
+	  this.setup();
+	}
+
+	Game.prototype.setup = function() {
+
+	};
+
+	module.exports = Game;
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	function InputManager() {
+	  // setup game to have listeners for keypressing arrows
+	  this.listen();
+	}
+
+	InputManager.prototype.listen = function() {
+	  // need to map the arrow keys accordingly
+	  var keys = {
+	    37: 0, // left
+	    38: 1, // up
+	    39: 2, // right
+	    40: 3  // down
+	  }
+
+	  $(document).keydown(function(e) {
+	    switch(e.keyCode) {
+	      case 37:
+	        alert("You pressed left")
+	        break;
+	      case 38:
+	        alert("You pressed up")
+	        break;
+	      case 39:
+	        alert("You pressed right")
+	        break;
+	      case 40:
+	        alert("You pressed down")
+	        break;
+
+	      default: return;
+	    }
+	    e.preventDefault();
+	  })
+	}
+
+
+	module.exports = InputManager
 
 
 /***/ }
