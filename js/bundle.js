@@ -64,7 +64,17 @@
 	}
 
 	Game.prototype.setup = function() {
+	  // find all tiles that are unoccupied
+	  // pick random empty space
+	  // give it a 2 or 4
 
+	  var $openTiles = $(".open");
+	  var numUnoccupiedTiles = $openTiles.length;
+
+	  var $randomTile = $openTiles[Math.floor(Math.random() * numUnoccupiedTiles)];
+
+	  $randomTile.textContent = 2;
+	  $randomTile.className = "grid-cell two-tile"
 	};
 
 	module.exports = Game;
@@ -90,7 +100,10 @@
 
 	  $(document).keydown(function(e) {
 	    switch(e.keyCode) {
+	      // placeholders for now
+	      // should move tiles over in the correct direction
 	      case 37:
+
 	        alert("You pressed left")
 	        break;
 	      case 38:
@@ -105,6 +118,7 @@
 
 	      default: return;
 	    }
+
 	    e.preventDefault();
 	  })
 	}

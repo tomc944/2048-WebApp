@@ -22,3 +22,11 @@
   background: rgba(238, 228, 218, 0.35); }
   .grid-cell:last-child {
     margin-right: 0; }
+
+.two-tile {
+    background: #eee4da;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    line-height: 106.25px;
+    text-align: center;
+    vertical-align: middle;
+}

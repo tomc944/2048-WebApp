@@ -14,7 +14,10 @@ InputManager.prototype.listen = function() {
 
   $(document).keydown(function(e) {
     switch(e.keyCode) {
+      // placeholders for now
+      // should move tiles over in the correct direction
       case 37:
+
         alert("You pressed left")
         break;
       case 38:
@@ -29,6 +32,7 @@ InputManager.prototype.listen = function() {
 
       default: return;
     }
+
     e.preventDefault();
   })
 }
